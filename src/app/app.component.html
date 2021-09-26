@@ -26,6 +26,22 @@
         <div class="name"[ngClass]="[member.isActive ? 'isActive': '']">{{member.name}}</div>
         <div class="member-title"[ngClass]="[member.isActive ? 'isActive': '']">{{member.title}}</div>
       </div>
+      <div [ngClass]="[member.isActive ? 'isActive': '']">
+         <div [ngClass]="[member.isActive ? 'isActive': '']">
+          <i class="icon" [ngClass]="[member.isActive ? 'isActive': '']" 
+          style="float: right" 
+          *ngIf="member.isActive; else inActive">
+          <mat-icon>remove</mat-icon>
+        </i>
+          <ng-template class="icon" #inActive>
+            <div class="icon">
+              <mat-icon style="float: right">add</mat-icon>
+
+            </div>            
+          </ng-template>
+        </div> 
+       
+      </div>
       
     </div>
 
