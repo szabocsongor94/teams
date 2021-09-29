@@ -19,23 +19,23 @@
     <div *ngFor="let member of filteredTeams" class="flex flex-ai-c flex-jc-c member" (click)="activateTeam(member)" [ngClass]="[member.isActive ? 'isActive': '']">
       
       
-      <div class="prof-img" [ngClass]="[member.isActive ? 'isActive': '']">
+      <div class="prof-img pointer" [ngClass]="[member.isActive ? 'isActive': '']">
         <img src="{{member.image}}" alt="profil picture" class="profImg">
       </div>
       <div class="flex flex-fd-c" [ngClass]="[member.isActive ? 'isActive': '']">
-        <div class="name"[ngClass]="[member.isActive ? 'isActive': '']">{{member.name}}</div>
-        <div class="member-title"[ngClass]="[member.isActive ? 'isActive': '']">{{member.title}}</div>
+        <div class="name pointer"[ngClass]="[member.isActive ? 'isActive': '']">{{member.name}}</div>
+        <div class="member-title pointer"[ngClass]="[member.isActive ? 'isActive': '']">{{member.title}}</div>
       </div>
       <div [ngClass]="[member.isActive ? 'isActive': '']">
          <div [ngClass]="[member.isActive ? 'isActive': '']">
-          <i class="icon" [ngClass]="[member.isActive ? 'isActive': '']" 
-          style="float: right; cursor: pointer" 
+          <i class="icon pointer" [ngClass]="[member.isActive ? 'isActive': '']" 
+          style="float: right;" 
           *ngIf="member.isActive; else inActive">
           <mat-icon>remove</mat-icon>
         </i>
           <ng-template class="icon" #inActive>
-            <div class="icon">
-              <mat-icon style="float: right; cursor: pointer">add</mat-icon>
+            <div class="icon pointer">
+              <mat-icon style="float: right">add</mat-icon>
 
             </div>            
           </ng-template>
